@@ -1,14 +1,23 @@
 <template>
-  <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </div>
-  <router-view/>
+  <NavigationBar />
+  <router-view />
 </template>
+
+<script lang="ts">
+import { Options, Vue } from 'vue-class-component';
+import NavigationBar from './components/NavigationBar.vue';
+
+@Options({
+  components: {
+    NavigationBar
+  }
+})
+export default class App extends Vue { }
+</script>
 
 <style lang="scss">
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: Open Sans, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
