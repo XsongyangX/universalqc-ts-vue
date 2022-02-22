@@ -4,12 +4,12 @@
       <div class="row">
         <div class="position relative">
           <img
-            class="nav-icon position-absolute top-0 start-0"
-            :src="require('@/assets/logo mobile.svg')"
+            class="position-absolute top-0 start-0"
+            :src="require('@/assets/logo.png')"
             alt="Logo"
           />
           <img
-            class="nav-icon position-absolute top-0 end-0"
+            class="position-absolute top-0 end-0"
             :src="require('@/assets/menu icon.svg')"
             alt="Menu button"
           />
@@ -22,14 +22,8 @@
 </template>
 
 <style lang="scss">
-.nav-icon {
-  width: 61px;
-  height: 61px;
-}
-
-#logo {
-  position: absolute;
-  left: 0px;
-  top: 0px;
-}
+// .nav-icon {
+//   width: 61px;
+//   height: 61px;
+// }
 </style>
