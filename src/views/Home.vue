@@ -5,6 +5,7 @@
       :src="require('@/assets/montreal-hero.jpg')"
       alt="Montreal background"
     />
+    <div class="universal">UNIVERSAL</div>
   </div>
 </template>
 
@@ -23,6 +24,25 @@
   @media only screen and (max-width: 1080px) {
     height: 640px;
   }
+}
+
+.universal {
+  position: absolute;
+  width: 359px;
+  height: 79px;
+  left: 1px;
+  top: 241px;
+
+  font-family: "Oswald", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 48px;
+  line-height: 71px;
+  text-align: center;
+
+  color: #ffffff;
+
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.28);
 }
 </style>
 
