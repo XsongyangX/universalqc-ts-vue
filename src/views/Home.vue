@@ -1,12 +1,5 @@
 <template>
-  <div class="container-fluid p-0 m-0">
-    <img
-      class="img-responsive background"
-      :src="require('@/assets/montreal-hero.jpg')"
-      alt="Montreal background"
-    />
-    <div class="universal">UNIVERSAL</div>
-  </div>
+  <div class="universal">UNIVERSAL</div>
 </template>
 
 <style lang="scss">
@@ -15,23 +8,21 @@
 // @import "~bootstrap/scss/_variables.scss";
 // @import "~bootstrap/scss/mixins/_breakpoints.scss";
 
-.background {
-  max-width: 100%;
-  min-height: 100%;
-  object-fit: cover;
-  object-position: 50% 100%;
-  // below this width, we crop the image and only see a part of it
-  @media only screen and (max-width: 1080px) {
-    height: 640px;
-  }
+body {
+  background-image: url("~@/assets/montreal-hero.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 100%;
+
+  z-index: -1;
 }
 
 .universal {
   position: absolute;
-  width: 359px;
-  height: 79px;
-  left: 1px;
-  top: 241px;
+  top: 45%;
+  width: 100%;
+  height: 50%;
 
   font-family: "Oswald", sans-serif;
   font-style: normal;
