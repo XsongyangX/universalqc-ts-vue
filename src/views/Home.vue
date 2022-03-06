@@ -1,5 +1,6 @@
 <template>
   <div class="universal fade-in">UNIVERSAL</div>
+  <div class="landing-panel move-in-from-below"></div>
 </template>
 
 <style lang="scss">
@@ -8,6 +9,7 @@
 // @import "~bootstrap/scss/_variables.scss";
 // @import "~bootstrap/scss/mixins/_breakpoints.scss";
 
+// background image of montreal
 body {
   background-image: url("~@/assets/montreal-hero.jpg");
   background-attachment: fixed;
@@ -18,6 +20,7 @@ body {
   z-index: -1;
 }
 
+// title
 .universal {
   position: absolute;
   top: 45%;
@@ -37,19 +40,46 @@ body {
 }
 
 .fade-in {
-  opacity: 0.9;
-  animation-name: fadeInOpacity;
+  animation-name: fade-in-opacity;
   animation-iteration-count: 1;
   animation-timing-function: ease-in;
   animation-duration: 1s;
+  animation-fill-mode: forwards;
 }
 
-@keyframes fadeInOpacity {
+@keyframes fade-in-opacity {
   0% {
     opacity: 0;
   }
   100% {
     opacity: 0.9;
+  }
+}
+
+.landing-panel {
+  opacity: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0px;
+  top: 70%;
+
+  background: rgba(143, 96, 220, 0.85);
+}
+
+.move-in-from-below {
+  animation: appear-up 1s 1s forwards;
+}
+
+@keyframes appear-up {
+  0% {
+    top: 100%;
+    opacity: 0;
+  }
+
+  100% {
+    top: 70%;
+    opacity: 0.85;
   }
 }
 </style>
