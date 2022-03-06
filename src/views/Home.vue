@@ -1,5 +1,5 @@
 <template>
-  <div class="universal">UNIVERSAL</div>
+  <div class="universal fade-in">UNIVERSAL</div>
 </template>
 
 <style lang="scss">
@@ -34,6 +34,23 @@ body {
   color: #ffffff;
 
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.28);
+}
+
+.fade-in {
+  opacity: 0.9;
+  animation-name: fadeInOpacity;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-duration: 1s;
+}
+
+@keyframes fadeInOpacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0.9;
+  }
 }
 </style>
 
