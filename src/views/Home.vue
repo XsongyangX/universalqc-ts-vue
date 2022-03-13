@@ -8,14 +8,30 @@
       </div>
     </div>
   </div>
+  <div class="panel-page" style="background: rgba(119, 51, 222, 0.9);">
+    <div class="profile-photo">
+      <div class="outer-circle">
+        <img class="inner-circle" :src="require('@/assets/selfie 480x480.jpg')" />
+      </div>
+    </div>
+    <div class="profile-description">
+      <div class="panel-line"></div>
+      <div class="profile-description-text">
+        <p class="panel-text" style="font-weight: 300;">
+          The Universal Party is a federalist, center-left party with a libertarian touch.
+          <br />
+          <br />I created this party out of disappointment in the Quebec establishment.
+        </p>
+        <p class="panel-text" style="text-align: right;">
+          SONG YANG
+          <br />Founder, Leader
+        </p>
+      </div>
+    </div>
+  </div>
 </template>
 
 <style lang="scss">
-// in case you need the bootstrap breakpoint vars
-// @import "~bootstrap/scss/_functions.scss";
-// @import "~bootstrap/scss/_variables.scss";
-// @import "~bootstrap/scss/mixins/_breakpoints.scss";
-
 // background image of montreal
 body {
   background-image: url("~@/assets/montreal-hero.jpg");
@@ -83,7 +99,7 @@ body {
   from {
     opacity: 0;
     visibility: visible;
-    transform: translateY(100%);
+    transform: translateY(-100%);
   }
 
   to {
@@ -96,7 +112,7 @@ body {
 
 .panel-margin {
   margin-left: 15%;
-  margin-right: 10%;
+  margin-right: 15%;
   margin-top: 5%;
 }
 
@@ -105,7 +121,7 @@ body {
   font-family: "Open Sans", sans-serif;
   font-style: normal;
   font-weight: 400;
-  font-size: 22px;
+  font-size: 20px;
   line-height: 27px;
 
   animation: appear-up-text 1s 1s forwards;
@@ -123,7 +139,7 @@ body {
   display: flex;
 
   width: 142px;
-  height: 31px;
+  height: 39px;
 
   animation: appear-up-button 1s 1s forwards;
 }
@@ -152,6 +168,54 @@ body {
     color: #000000;
     opacity: 1;
   }
+}
+
+// Second page: profile picture
+
+.profile-photo {
+  margin-top: 10vh; // top margin
+  margin-bottom: 2vh;
+  // flex-basis: 5vh; // bottom margin
+}
+
+.outer-circle {
+  background-color: #f1eaf9;
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+
+  margin: auto; // center circle
+
+  display: flex;
+}
+
+.inner-circle {
+  height: 175px;
+  width: 175px;
+  border-radius: 50%;
+
+  margin: auto;
+}
+
+.profile-description {
+  display: flex;
+  flex-direction: row;
+}
+
+.panel-line {
+  height: 327px;
+  border-left: 10px solid #f1eaf9;
+
+  margin-left: 10%;
+  // margin-top: 5%;
+  margin-right: 10%;
+}
+
+.profile-description-text {
+  padding-right: 40px;
+
+  display: flex;
+  flex-direction: column;
 }
 </style>
 
