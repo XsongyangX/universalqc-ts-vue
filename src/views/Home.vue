@@ -1,6 +1,13 @@
 <template>
-  <div class="universal fade-in">UNIVERSAL</div>
-  <div class="landing-panel move-in-from-below"></div>
+  <div class="panel-page">
+    <div class="panel-title fade-in">UNIVERSAL</div>
+    <div class="landing-panel">
+      <p class="panel-text panel-margin">Everyone deserves a promising, open and free future.</p>
+      <div class="panel-button panel-margin">
+        <p class="panel-button-text">LEARN MORE</p>
+      </div>
+    </div>
+  </div>
 </template>
 
 <style lang="scss">
@@ -20,12 +27,18 @@ body {
   z-index: -1;
 }
 
-// title
-.universal {
-  position: absolute;
-  top: 45%;
+.panel-page {
+  display: flex;
+  flex-direction: column;
+
   width: 100%;
-  height: 50%;
+  height: 100vh;
+}
+
+// title
+.panel-title {
+  margin-top: 38vh; // top margin
+  flex-basis: 32vh; // bottom margin
 
   font-family: "Oswald", sans-serif;
   font-style: normal;
@@ -57,29 +70,87 @@ body {
 }
 
 .landing-panel {
-  opacity: 0;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  left: 0px;
-  top: 70%;
+  flex-grow: 2;
 
-  background: rgba(143, 96, 220, 0.85);
-}
+  display: flex;
+  flex-direction: column;
 
-.move-in-from-below {
   animation: appear-up 1s 1s forwards;
+  background: rgba(143, 96, 220, 0);
 }
 
 @keyframes appear-up {
-  0% {
-    top: 100%;
+  from {
     opacity: 0;
+    visibility: visible;
+    transform: translateY(100%);
   }
 
-  100% {
-    top: 70%;
+  to {
+    background: rgba(143, 96, 220, 0.85);
     opacity: 0.85;
+    visibility: visible;
+    transform: translateY(0%);
+  }
+}
+
+.panel-margin {
+  margin-left: 15%;
+  margin-right: 10%;
+  margin-top: 5%;
+}
+
+.panel-text {
+  text-align: left;
+  font-family: "Open Sans", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 27px;
+
+  animation: appear-up-text 1s 1s forwards;
+  opacity: 0;
+}
+
+@keyframes appear-up-text {
+  to {
+    opacity: 1;
+    color: white;
+  }
+}
+
+.panel-button {
+  display: flex;
+
+  width: 142px;
+  height: 31px;
+
+  animation: appear-up-button 1s 1s forwards;
+}
+
+@keyframes appear-up-button {
+  to {
+    background: #ffffff;
+  }
+}
+
+.panel-button-text {
+  margin: auto;
+
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 22px;
+
+  animation: appear-up-button-text 1s 1s forwards;
+  opacity: 0;
+}
+
+@keyframes appear-up-button-text {
+  to {
+    color: #000000;
+    opacity: 1;
   }
 }
 </style>

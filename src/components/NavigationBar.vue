@@ -1,40 +1,45 @@
 <template>
-  <div class="appear-in">
-    <div class="d-md-none">
-      <div class="container-fluid m-0 p-0">
-        <div class="row">
-          <div class="position relative">
-            <img
-              class="position-absolute top-0 start-0"
-              :src="require('@/assets/logo.png')"
-              alt="Logo"
-            />
-            <img
-              class="position-absolute top-0 end-0"
-              :src="require('@/assets/menu icon.svg')"
-              alt="Menu button"
-            />
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="d-none d-md-block">DESKTOP VERSION</div>
+  <div class="fade-in-delayed">
+    <img :src="require('@/assets/logo.png')" id="logo" />
+    <img :src="require('@/assets/menu icon.svg')" id="menu" />
   </div>
 </template>
 
 <style lang="scss">
-.appear-in {
+$navbar-height: 61px; // height of the logo
+
+.fade-in-delayed {
+  animation-name: fade-in-opacity;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-delay: 1s;
+
   opacity: 0;
-  animation: appear-up 1s 1s forwards;
+  width: 100%;
+
+  position: fixed;
 }
 
-@keyframes appear-up {
+@keyframes fade-in-opacity {
   0% {
     opacity: 0;
   }
-
   100% {
     opacity: 0.9;
   }
+}
+
+#logo {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+#menu {
+  position: absolute;
+  right: 0;
+  top: 0;
 }
 </style>
