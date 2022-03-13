@@ -20,6 +20,8 @@ $navbar-height: 61px; // height of the logo
   width: 100%;
 
   position: fixed;
+
+  z-index: 1;
 }
 
 @keyframes fade-in-opacity {
