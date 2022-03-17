@@ -42,6 +42,48 @@
       </div>
     </div>
   </div>
+  <div class="panel-page language">
+    <div class="proposal-panel">
+      <p class="principle-title">LANGUAGE FREEDOM</p>
+      <div class="proposal-button">
+        <p class="proposal-button-text">LEARN MORE</p>
+      </div>
+    </div>
+  </div>
+  <div class="panel-page climate">
+    <div class="proposal-panel" style="margin-top: 0; height: 40%; padding-top: 5%;">
+      <p class="principle-title">CLIMATE CHANGE</p>
+      <div class="proposal-button">
+        <p class="proposal-button-text">LEARN MORE</p>
+      </div>
+    </div>
+  </div>
+  <div class="panel-page" style="background: rgba(119, 51, 222, 0.9);">
+    <div class="panel-summary">
+      <p class="panel-summary-text">
+        UNIVERSAL BASIC INCOME
+        <br />LANGUAGE FREEDOM
+        <br />CLIMATE CHANGE
+      </p>
+    </div>
+    <div class="profile-description" style="padding-top: 5%;">
+      <div class="panel-line"></div>
+      <div class="profile-description-text">
+        <p class="panel-text">
+          The Universal Party values individual rights. Each one of us is unique. That’s what makes life worth living for.
+          <br />
+          <br />Quebec has put collective identity too far. We commit to the abolition of
+          <b>Bill 21 and Bill 101</b>.
+        </p>
+        <p class="panel-text" style="text-align: right;">
+          SONG YANG
+          <br />Founder, Leader
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="panel-page call-to-sign"></div>
+  <div class="panel-page email-subscription"></div>
 </template>
 
 <style lang="scss">
@@ -300,6 +342,63 @@ body {
   text-align: center;
 
   color: #ffffff;
+}
+
+.language {
+  background-image: url("~@/assets/language.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 100%;
+}
+
+.climate {
+  background-image: url("~@/assets/greta.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 100%;
+}
+
+.panel-summary {
+  margin-top: 62px;
+  background: rgba(255, 255, 255, 0.89);
+
+  display: flex;
+}
+
+.panel-summary-text {
+  margin: auto;
+
+  padding-top: 15px;
+  padding-bottom: 15px;
+
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 35px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+
+  color: #7234ce;
+}
+
+.call-to-sign {
+  background-image: url("~@/assets/signature stock 2.jpeg");
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 100%;
+}
+
+.email-subscription {
+  background-image: url("~@/assets/laptop.jpeg");
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 100%;
 }
 </style>
 
