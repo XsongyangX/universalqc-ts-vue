@@ -29,6 +29,19 @@
       </div>
     </div>
   </div>
+  <div class="panel-page">
+    <div class="principle-panel">
+      <p class="principle-title">PRINCIPLES</p>
+    </div>
+  </div>
+  <div class="panel-page ubi">
+    <div class="proposal-panel">
+      <p class="principle-title">UNIVERSAL BASIC INCOME</p>
+      <div class="proposal-button">
+        <p class="proposal-button-text">LEARN MORE</p>
+      </div>
+    </div>
+  </div>
 </template>
 
 <style lang="scss">
@@ -216,6 +229,77 @@ body {
 
   display: flex;
   flex-direction: column;
+}
+
+.principle-panel {
+  margin-top: 45vh;
+
+  padding-top: 5%;
+  padding-bottom: 5%;
+
+  background-color: rgba(241, 234, 249, 0.9);
+
+  display: flex;
+  flex-direction: column;
+}
+
+.principle-title {
+  margin: auto;
+
+  font-family: "Oswald";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 53px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+
+  color: #000000;
+}
+
+.ubi {
+  background-image: url("~@/assets/UBI.png");
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 62% 100%;
+}
+
+.proposal-panel {
+  margin-top: 60vh;
+
+  height: 100%;
+
+  background: rgba(241, 234, 249, 0.85);
+
+  display: flex;
+  flex-direction: column;
+}
+
+.proposal-button {
+  margin: auto;
+
+  padding: 3%;
+
+  background: rgba(143, 96, 220, 0.85);
+
+  display: flex;
+}
+
+.proposal-button-text {
+  margin: auto;
+
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 27px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+
+  color: #ffffff;
 }
 </style>
 
