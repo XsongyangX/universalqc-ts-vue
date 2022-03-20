@@ -82,8 +82,33 @@
       </div>
     </div>
   </div>
-  <div class="panel-page call-to-sign"></div>
-  <div class="panel-page email-subscription"></div>
+  <div class="panel-page call-to-sign">
+    <div
+      class="panel-summary"
+      style="background: #C4C4C4; opacity: 0.95; flex-direction: column; padding-top: 5%; padding-bottom: 5%;"
+    >
+      <p class="principle-title" style="margin-bottom: 10px;">HELP US REGISTER!</p>
+
+      <p
+        class="call-to-action-text"
+      >The party needs 100 signatures from all of Quebec to be officially authorized in the election.</p>
+      <div class="proposal-button">
+        <p class="proposal-button-text">SIGN UP</p>
+      </div>
+    </div>
+  </div>
+  <div class="panel-page email-subscription">
+    <div
+      class="panel-summary"
+      style="background: #C4C4C4; opacity: 0.95; flex-direction: column; padding-top: 5%; padding-bottom: 5%;"
+    >
+      <p class="principle-title" style="margin-bottom: 10px;">SUBSCRIBE TO OUR NEWSLETTER</p>
+      <input type="email" placeholder="sophie@example.com" style="margin: 5%;" />
+      <div class="proposal-button">
+        <p class="proposal-button-text">SUBSCRIBE</p>
+      </div>
+    </div>
+  </div>
 </template>
 
 <style lang="scss">
@@ -391,6 +416,19 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 50% 100%;
+}
+
+.call-to-action-text {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 30px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+
+  color: #000000;
 }
 
 .email-subscription {
