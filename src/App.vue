@@ -1,15 +1,18 @@
 <template>
   <NavigationBar />
   <router-view />
+  <SiteFooter />
 </template>
 
 <script lang="ts">
 import { Options, Vue } from 'vue-class-component';
 import NavigationBar from './components/NavigationBar.vue';
+import SiteFooter from './components/SiteFooter.vue';
 
 @Options({
   components: {
-    NavigationBar
+    NavigationBar,
+    SiteFooter
   }
 })
 export default class App extends Vue { }
