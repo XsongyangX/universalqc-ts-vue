@@ -2,7 +2,10 @@
   <div class="panel-page">
     <div class="panel-title fade-in">UNIVERSAL</div>
     <div class="landing-panel">
-      <p class="panel-text panel-margin">Everyone deserves a promising, open and free future.</p>
+      <p
+        class="panel-text panel-margin"
+        style="animation: appear-up-text 1s 1s forwards;"
+      >Everyone deserves a promising, open and free future.</p>
       <div class="panel-button panel-margin">
         <p class="panel-button-text">LEARN MORE</p>
       </div>
@@ -204,8 +207,11 @@ body {
   font-size: 20px;
   line-height: 27px;
 
-  animation: appear-up-text 1s 1s forwards;
   opacity: 0;
+}
+
+.onscroll-appearance {
+  animation: appear-up-text 1s 0.5s forwards;
 }
 
 @keyframes appear-up-text {
@@ -441,7 +447,30 @@ body {
 </style>
 
 <script lang="ts">
-import { Options, Vue } from 'vue-class-component';
+import { Vue } from 'vue-class-component';
 
-export default class Home extends Vue { }
+export default class Home extends Vue {
+  mounted(): void {
+    // https://coolcssanimation.com/how-to-trigger-a-css-animation-on-scroll/
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        const square = entry.target;
+
+        if (entry.isIntersecting) {
+          square.classList.add('onscroll-appearance');
+          return; // if we added the class, exit the function
+        }
+      });
+    });
+
+    const panelText = document.querySelectorAll('.panel-text');
+
+    if (panelText == null) throw new Error(".panel-text not found");
+
+    panelText.forEach(panel => {
+      if (!panel.parentElement?.classList.contains(".landing-panel"))
+        observer.observe(panel);
+    });
+  }
+}
 </script>
