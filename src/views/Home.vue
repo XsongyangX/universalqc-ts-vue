@@ -444,6 +444,11 @@ body {
   background-repeat: no-repeat;
   background-position: 50% 100%;
 }
+
+.invert-svg {
+  filter: invert(100%) sepia(86%) saturate(60%) hue-rotate(261deg)
+    brightness(111%) contrast(100%);
+}
 </style>
 
 <script lang="ts">
@@ -451,26 +456,57 @@ import { Vue } from 'vue-class-component';
 
 export default class Home extends Vue {
   mounted(): void {
+
+    // animation on scroll
     // https://coolcssanimation.com/how-to-trigger-a-css-animation-on-scroll/
-    const observer = new IntersectionObserver(entries => {
+    const animationObserver = new IntersectionObserver(entries => {
       entries.forEach(entry => {
-        const square = entry.target;
+        const textTarget = entry.target;
 
         if (entry.isIntersecting) {
-          square.classList.add('onscroll-appearance');
+          textTarget.classList.add('onscroll-appearance');
           return; // if we added the class, exit the function
         }
       });
     });
 
+    // animation for all descriptive text blocks
     const panelText = document.querySelectorAll('.panel-text');
 
-    if (panelText == null) throw new Error(".panel-text not found");
+    if (panelText == null) throw new Error("panel-text not found");
 
     panelText.forEach(panel => {
-      if (!panel.parentElement?.classList.contains(".landing-panel"))
-        observer.observe(panel);
+      if (!panel.parentElement?.classList.contains("landing-panel"))
+        animationObserver.observe(panel);
     });
+
+    // change svg when background is dark
+    const colorObserver = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        const menuSVG = document.querySelector("#menu");
+
+        // console.log(menuSVG);
+
+        if (menuSVG == null) throw new Error("Menu svg not found");
+
+        if (entry.isIntersecting) {
+          // change the menu svg
+          menuSVG.classList.add("invert-svg");
+        }
+        else {
+          menuSVG.classList.remove("invert-svg");
+        }
+      });
+
+      // console.log("In color observer")
+
+    }, { rootMargin: "10px" });
+
+    const menuItem = document.querySelector(".call-to-sign");
+
+    if (menuItem == null) throw new Error("call to sign not found");
+
+    colorObserver.observe(menuItem);
   }
 }
 </script>
