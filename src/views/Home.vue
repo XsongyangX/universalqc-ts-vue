@@ -6,12 +6,16 @@
         class="panel-text panel-margin"
         style="animation: appear-up-text 1s 1s forwards;"
       >Everyone deserves a promising, open and free future.</p>
-      <div class="panel-button panel-margin">
+      <a
+        class="panel-button panel-margin"
+        @click="scrollMeTo('leader-message')"
+        style="text-decoration: none; cursor:pointer;"
+      >
         <p class="panel-button-text">LEARN MORE</p>
-      </div>
+      </a>
     </div>
   </div>
-  <div class="panel-page" style="background: rgba(119, 51, 222, 0.9);">
+  <div ref="leader-message" class="panel-page" style="background: rgba(119, 51, 222, 0.9);">
     <div class="profile-photo">
       <div class="outer-circle">
         <img class="inner-circle" :src="require('@/assets/selfie 480x480.jpg')" />
@@ -40,25 +44,25 @@
   <div class="panel-page ubi">
     <div class="proposal-panel">
       <p class="principle-title">UNIVERSAL BASIC INCOME</p>
-      <div class="proposal-button">
+      <router-link to="/platform#UBI" class="proposal-button">
         <p class="proposal-button-text">LEARN MORE</p>
-      </div>
+      </router-link>
     </div>
   </div>
   <div class="panel-page language">
     <div class="proposal-panel">
       <p class="principle-title">LANGUAGE FREEDOM</p>
-      <div class="proposal-button">
+      <router-link to="/platform#language" class="proposal-button">
         <p class="proposal-button-text">LEARN MORE</p>
-      </div>
+      </router-link>
     </div>
   </div>
   <div class="panel-page climate">
     <div class="proposal-panel" style="margin-top: 0; height: 40%; padding-top: 5%;">
       <p class="principle-title">CLIMATE CHANGE</p>
-      <div class="proposal-button">
+      <router-link to="/platform#climate" class="proposal-button">
         <p class="proposal-button-text">LEARN MORE</p>
-      </div>
+      </router-link>
     </div>
   </div>
   <div class="panel-page" style="background: rgba(119, 51, 222, 0.9);">
@@ -95,9 +99,9 @@
       <p
         class="call-to-action-text"
       >The party needs 100 signatures from all of Quebec to be officially authorized in the election.</p>
-      <div class="proposal-button">
+      <router-link to="/sign-up" class="proposal-button">
         <p class="proposal-button-text">SIGN UP</p>
-      </div>
+      </router-link>
     </div>
   </div>
   <div class="panel-page email-subscription">
@@ -176,6 +180,8 @@ body {
 
   animation: appear-up 1s 1s forwards;
   background: rgba(143, 96, 220, 0);
+
+  padding-bottom: 20px;
 }
 
 @keyframes appear-up {
@@ -358,6 +364,8 @@ body {
   background: rgba(143, 96, 220, 0.85);
 
   display: flex;
+
+  text-decoration: none;
 }
 
 .proposal-button-text {
@@ -434,6 +442,9 @@ body {
   align-items: center;
   text-align: center;
 
+  padding-left: 5%;
+  padding-right: 5%;
+
   color: #000000;
 }
 
@@ -507,6 +518,14 @@ export default class Home extends Vue {
     if (menuItem == null) throw new Error("call to sign not found");
 
     colorObserver.observe(menuItem);
+  }
+
+  // scrolling to sections
+  scrollMeTo(refName: string): void {
+    var element = this.$refs[refName];
+    var top = (element as HTMLElement).offsetTop;
+
+    window.scrollTo(0, top);
   }
 }
 </script>

@@ -1,7 +1,7 @@
 <template>
   <div class="fade-in-delayed">
-    <img :src="require('@/assets/logo.png')" id="logo" />
-    <img :src="require('@/assets/menu icon.svg')" id="menu" />
+    <img :src="require('@/assets/logo.png')" id="logo" alt="The Logo of the Universal Party" />
+    <img :src="require('@/assets/menu icon.svg')" id="menu" alt="Menu display button" />
   </div>
 </template>
 
