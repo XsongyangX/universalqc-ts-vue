@@ -2,11 +2,15 @@
     <div class="footer-panel">
         <p class="footer-title footer-padding">UNIVERSAL PARTY</p>
         <p class="footer-description footer-padding">
-            Platform
-            <br />Candidates
-            <br />Donate & Volunteer
-            <br />Contact us
-            <br />About
+            <router-link to="/platform" class="clickable-link">Platform</router-link>
+            <br />
+            <router-link to="/candidates" class="clickable-link">Candidates</router-link>
+            <br />
+            <router-link to="/donate-and-volunteer" class="clickable-link">Donate & Volunteer</router-link>
+            <br />
+            <router-link to="/contact" class="clickable-link">Contact us</router-link>
+            <br />
+            <router-link to="/about" class="clickable-link">About</router-link>
         </p>
         <p class="copyright">Copyright 2022 © Song Yang</p>
     </div>
@@ -65,6 +69,16 @@
     margin: auto;
 
     padding-bottom: 15px;
+}
+
+.clickable-link {
+    text-decoration: none;
+    color: white;
+}
+
+.clickable-link:hover {
+    color: white;
+    text-decoration: underline;
 }
 </style>
 
