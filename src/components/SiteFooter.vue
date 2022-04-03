@@ -1,6 +1,8 @@
 <template>
     <div class="footer-panel">
-        <p class="footer-title footer-padding">UNIVERSAL PARTY</p>
+        <p class="footer-title footer-padding">
+            <router-link to="/" class="clickable-link">UNIVERSAL PARTY</router-link>
+        </p>
         <p class="footer-description footer-padding">
             <router-link to="/platform" class="clickable-link">Platform</router-link>
             <br />
