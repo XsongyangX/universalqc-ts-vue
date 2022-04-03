@@ -1,0 +1,46 @@
+.about-page {
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+}
+
+.page-header {
+    height: 112px;
+
+    margin-top: 61px;
+
+    background: rgba(143, 96, 220, 0.85);
+
+    display: flex;
+}
+
+.page-header-text {
+    font-family: "Open Sans";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 35px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    margin: auto;
+
+    color: #ffffff;
+}
+
+.page-description-box {
+    background: rgba(255, 255, 255, 0.89);
+    padding: 5%;
+}
+
+.page-description-text {
+    font-family: "Open Sans";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 27px;
+
+    color: #000000;
+}
