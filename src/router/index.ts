@@ -25,6 +25,11 @@ const routes: Array<RouteRecordRaw> = [
     name: "Donate and Volunteer",
     component: () => import("@/views/DonateAndVolunteer.vue")
   },
+  {
+    path: '/candidates',
+    name: "Candidates",
+    component: () => import("@/views/Candidates.vue")
+  },
   { path: "/:pathMatch(.*)*", component: () => import('@/views/NotAvailable.vue') }
 ]
 
