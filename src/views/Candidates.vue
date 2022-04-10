@@ -4,7 +4,7 @@
             <p class="page-header-text">WHO'S BEHIND THE PARTY? MEET THE CANDIDATES</p>
         </div>
         <!-- picture of Song Yang -->
-        <img :src="require('@/assets/me color corrected.png')" />
+        <img :src="require('@/assets/me color corrected.png')" alt="Picture of Song Yang" />
 
         <div class="page-minor-header">
             <p class="page-minor-header-text">
