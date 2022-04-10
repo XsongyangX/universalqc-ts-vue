@@ -67,7 +67,7 @@
 </style>
 
 <style lang="scss">
-body {
+.signature-photo {
   background-image: url("~@/assets/signature stock 2.jpeg");
   background-attachment: fixed;
   background-size: cover;
@@ -75,9 +75,11 @@ body {
   background-position: 50% 100%;
 }
 
-.invert-svg {
-  filter: invert(100%) sepia(86%) saturate(60%) hue-rotate(261deg)
-    brightness(111%) contrast(100%);
+.color-inversion {
+  @media only screen and (max-width: 768px) {
+    filter: invert(100%) sepia(86%) saturate(60%) hue-rotate(261deg)
+      brightness(111%) contrast(100%);
+  }
 }
 </style>
 
@@ -86,8 +88,23 @@ import { Vue } from "vue-class-component";
 
 export default class SignUp extends Vue {
   mounted(): void {
+    // signature background
+    const background = document.body;
+    background?.classList.add("signature-photo");
+
+    // menu
     const menuSVG = document.querySelector("#menu");
-    menuSVG?.classList.add("invert-svg");
+    menuSVG?.classList.add("color-inversion");
+  }
+
+  unmounted(): void {
+    // signature background
+    const background = document.body;
+    background?.classList.remove("signature-photo");
+
+    // menu
+    const menuSVG = document.querySelector("#menu");
+    menuSVG?.classList.remove("color-inversion");
   }
 }
 </script>
