@@ -5,11 +5,38 @@
     <img @click="openNav()" :src="require('@/assets/menu icon.svg')" id="menu" alt="Menu display button" />
   </div>
   <div ref="pullout" class="sidenav">
-    <a href="javascript:void(0)" class="closebtn" @click="closeNav()">&times;</a>
-    <a href="#">About</a>
-    <a href="#">Services</a>
-    <a href="#">Clients</a>
-    <a href="#">Contact</a>
+    <div class="sidenav-header">
+      <router-link to="/"><img :src="require('@/assets/logo.png')" alt="The Logo of the Universal Party" />
+      </router-link>
+      <router-link to="/" style="text-decoration: none;" class="sidenav-header-title">
+        <p class="sidenav-header-title-text">UNIVERSAL PARTY</p>
+      </router-link>
+      <img @click="closeNav()" class="close-button" :src="require('@/assets/close_button.svg')" alt="Logo of the party">
+    </div>
+    <router-link class="sidenav-item" to="/news" @click="closeNav()">
+      <p class="sidenav-item-text">NEWS</p>
+    </router-link>
+    <router-link class="sidenav-item" to="/platform" @click="closeNav()">
+      <p class="sidenav-item-text">PLATFORM</p>
+    </router-link>
+    <router-link class="sidenav-item" to="/candidates" @click="closeNav()">
+      <p class="sidenav-item-text">CANDIDATES</p>
+    </router-link>
+    <router-link class="sidenav-item" to="/donate-and-volunteer" @click="closeNav()">
+      <p class="sidenav-item-text">DONATE & VOLUNTEER</p>
+    </router-link>
+    <router-link class="sidenav-item" to="/about" @click="closeNav()">
+      <p class="sidenav-item-text">ABOUT</p>
+    </router-link>
+    <router-link class="sidenav-item" to="/contact" @click="closeNav()">
+      <p class="sidenav-item-text">CONTACT US</p>
+    </router-link>
+    <div class="sidenav-item">
+      <p class="sidenav-item-text" style="text-decoration: underline;">ENGLISH</p>
+      <p class="sidenav-item-text" style="font-weight: 400;">|</p>
+      <p class="sidenav-item-text" style="font-weight: 400;">FRANÇAIS</p>
+    </div>
+    <!-- ADD SOCIAL MEDIA LINKS -->
   </div>
 </template>
 
@@ -54,6 +81,11 @@ $navbar-height: 61px; // height of the logo
   top: 0;
 }
 
+#menu:hover {
+  cursor: pointer;
+}
+
+// https://www.w3schools.com/howto/howto_js_sidenav.asp
 /* The side navigation menu */
 .sidenav {
   height: 100%;
@@ -67,67 +99,83 @@ $navbar-height: 61px; // height of the logo
   top: 0;
   /* Stay at the top */
   right: 0;
-  background-color: #111;
-  /* Black*/
+
+  background-color: rgba(37, 37, 37, 0.86);
+
   overflow-x: hidden;
   /* Disable horizontal scroll */
-  padding-top: 60px;
-  /* Place content 60px from the top */
   transition: 0.5s;
   /* 0.5 second transition effect to slide in the sidenav */
+
+  display: flex;
+  flex-direction: column;
 }
 
-// https://www.w3schools.com/howto/howto_js_sidenav.asp
+/* Navigation header */
+.sidenav-header {
+  display: flex;
+}
+
+.sidenav-header-title {
+  background: #7234CE;
+
+  display: flex;
+
+  flex: auto;
+}
+
+.sidenav-header-title-text {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 33px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+
+  color: #FFFFFF;
+
+  margin: auto;
+}
+
+.close-button:hover {
+  cursor: pointer;
+}
 
 /* The navigation menu links */
-.sidenav a {
-  padding: 8px 8px 8px 32px;
+.sidenav-item {
+  display: flex;
+
   text-decoration: none;
-  font-size: 25px;
-  color: #818181;
-  display: block;
-  transition: 0.3s;
+
+  padding: 15px;
+}
+
+.sidenav-item-text {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 33px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+
+  color: #FFFFFF;
+  margin: auto;
 }
 
 /* When you mouse over the navigation links, change their color */
-.sidenav a:hover {
-  color: #f1f1f1;
-}
-
-/* Position and style the close button (top right corner) */
-.sidenav .closebtn {
-  position: absolute;
-  top: 0;
-  right: 25px;
-  font-size: 36px;
-  margin-left: 50px;
-}
-
-/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
-#main {
-  transition: margin-left .5s;
-  padding: 20px;
-}
-
-/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
-@media screen and (max-height: 450px) {
-  .sidenav {
-    padding-top: 15px;
-  }
-
-  .sidenav a {
-    font-size: 18px;
-  }
-}
 </style>
 
 <script lang="ts">
 import { Vue } from "vue-class-component";
 
 export default class SiteNavigation extends Vue {
-  /* Set the width of the side navigation to 250px */
+  /* Set the width of the side navigation to 375px */
   openNav(): void {
-    (this.$refs.pullout as HTMLElement).style.width = "250px";
+    (this.$refs.pullout as HTMLElement).style.width = "100%";
   }
 
   /* Set the width of the side navigation to 0 */
