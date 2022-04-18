@@ -35,6 +35,11 @@ const routes: Array<RouteRecordRaw> = [
     name: "Signature of support",
     component: () => import("@/views/SignUp.vue")
   },
+  {
+    path: '/platform',
+    name: "Platform",
+    component: () => import("@/views/Platform.vue")
+  },
   { path: "/:pathMatch(.*)*", component: () => import('@/views/NotAvailable.vue') }
 ]
 

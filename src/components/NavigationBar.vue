@@ -6,9 +6,10 @@
   </div>
   <div ref="pullout" class="sidenav">
     <div class="sidenav-header">
-      <router-link to="/"><img :src="require('@/assets/logo.png')" alt="The Logo of the Universal Party" />
+      <router-link @click="closeNav()" to="/"><img :src="require('@/assets/logo.png')"
+          alt="The Logo of the Universal Party" />
       </router-link>
-      <router-link to="/" style="text-decoration: none;" class="sidenav-header-title">
+      <router-link @click="closeNav()" to="/" style="text-decoration: none;" class="sidenav-header-title">
         <p class="sidenav-header-title-text">UNIVERSAL PARTY</p>
       </router-link>
       <img @click="closeNav()" class="close-button" :src="require('@/assets/close_button.svg')" alt="Logo of the party">
