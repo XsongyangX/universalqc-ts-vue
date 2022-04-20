@@ -24,9 +24,38 @@
         <p class="page-header-text">UNIVERSAL BASIC INCOME (UBI)</p>
         <span class="icon"><img src="@/assets/to_expand.svg" alt="Indicator for expansion"></span>
       </summary>
-      <p>
-        UBI description
-      </p>
+      <img class="platform-img" :src="require('@/assets/robot handshake.jpg')" alt="Handshake">
+      <div class="page-description-box">
+        <p class="page-description-text">UBI will soon become a necessity due to automation. With more advancements in
+          AI, employers are incentivized to replace their human workers to reduce labor costs.</p>
+      </div>
+      <iframe width="100%" height="315" style="padding: 10px;" src="https://www.youtube.com/embed/kl39KHS07Xc"
+        title="YouTube video player" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
+      <div class="page-description-box">
+        <p class="page-description-text">Our response shall not be a blanket ban on the use of technology. The future of
+          work will be re-imagined as a voluntary endeavor instead of economic desperation.
+          <br>
+          <br>
+          At $1200 / month per adult, this is not enough to live lavishly. But it will be a safety cushion. In line with
+          individual freedom, no strings are attached to UBI, unlike current welfare. No employment conditions.
+          <br>
+          <br>
+          According to <a href="https://www.ubiworks.ca/qc">UBI Works</a>, Quebec’s economy can grow by $17G a year and
+          add 128k jobs. At a time of pandemic
+          woes, this will give people more spending power and a better incentive to find fulfilling jobs. People can
+          also take on more risks in their life. Start a business, knowing that your back is covered!
+          <br>
+          <br>
+          UBI is expensive. For 7 million adults, the cost is $100G per year. UBI will replace the current welfare
+          system and disability recipients will get their funds matched upward. We plan to fund UBI in Quebec via a
+          combination of tax increases, corporate subsidy cuts and deficit spending. It is a redistribution of wealth
+          aimed at poverty elimination.
+
+          Indirectly, UBI will reduce costs in health care and criminal justice.
+        </p>
+      </div>
     </details>
     <!-- Language -->
     <details>
@@ -34,9 +63,39 @@
         <p class="page-header-text">LANGUAGE FREEDOM</p>
         <span class="icon"><img src="@/assets/to_expand.svg" alt="Indicator for expansion"></span>
       </summary>
-      <p>
-        Language description
-      </p>
+      <img class="platform-img" :src="require('@/assets/language expression.jpg')"
+        alt="People happy with speech bubbles">
+      <div class="page-description-box">
+        <p class="page-description-text">
+          Language freedom means the freedom to choose the language you want without reprisal from the government. It is
+          a consequence of freedom of speech.
+          <br>
+          <br>
+          Freedom of speech is important because it allows us to express ourselves in honesty. Free speech is the
+          bedrock of democracy. Freedom gives value to our choices.
+          <br>
+          <br>
+          In Quebec, freedom of speech is missing. Language laws and religion bans have suspended our freedom. Bill 101
+          prohibits attending English schools based on parental lineage, forces French as the language of business and
+          restricts government services to be only in French. Regulating language is authoritarian. We believe people
+          have the right to choose the languages of their lives. Our UBI proposal wouldn’t be an actual income if Bill
+          101
+          forces most of it to be spent in French.
+          <br>
+          <br>
+          Bill 101 is put in the name of protecting and promoting French, at the expense of freedom. We believe freedom
+          should always come first before cultural anxieties. If Quebec culture needs protection by suspending free
+          speech, Quebec culture cannot survive in a free society. A culture that requires coercion to survive is not
+          worthy of a democracy.
+          <br>
+          <br>
+          After almost 50 years of censorship, Quebec is still considering more restrictions. Meanwhile, more and more
+          people are attracted by foreign cultures from the US and even South Korea. We believe that an open competitive
+          cultural landscape is beneficial. Quebec culture will flourish if people engage with it on their own terms,
+          without pressure from the government. Bill 101 is holding Quebec from developing a culture that is actually
+          interesting.
+        </p>
+      </div>
     </details>
     <!-- Climate change -->
     <details>
@@ -44,9 +103,39 @@
         <p class="page-header-text">CLIMATE CHANGE</p>
         <span class="icon"><img src="@/assets/to_expand.svg" alt="Indicator for expansion"></span>
       </summary>
-      <p>
-        Climate change description
-      </p>
+      <img class="platform-img" :src="require('@/assets/earth melting.jpg')" alt="The Earth is melting">
+      <div class="page-description-box">
+        <p class="page-description-text">
+          Climate change is the defining issue of the 21st century. The IPCC has declared “code red” for humanity and we
+          must act now.
+          <br>
+          <br>
+          Quebec’s greehouse gas emissions do not represent a signficant part of the world. However, as a rich
+          first-world society, we must bear greater responsibility because we are more capable of action.
+          <br>
+          <br>
+          Climate change is solved through a concert of policies. This begins with setting a proper emissions target for
+          Quebec. With respect to climate justice and the 2015 Paris accord, Quebec has to reduce emissions by 60%
+          domestically and by 118% internationally by 2030, compared to 1990 levels. The current target by the CAQ is
+          37.5% and we aren’t even on track to achieve it. Emission targets are not political targets. They are
+          scientific targets. It is better to face the truth than to meet a weak target.
+          <br>
+          <br>
+          To achieve a domestic reduction of 60%, Quebec needs a variety of measures. Densify human settlements. Improve
+          public transportation within and between cities. Retrofit buildings with energy efficient solutions. And more.
+          <br>
+          <br>
+          To achieve the international reduction of 118%, Quebec needs to fund green infrastructure in developing
+          countries and provide technology transfer. As a Canadian province, Quebec should pressure Canada to phase out
+          fossil fuels. We must not start fossil fuel industries in Quebec.
+          <br>
+          <br>
+          Our current technology is not good enough. Climate change and technology transfer require innovation. Our
+          scientists cannot think clearly if speaking English is treated like a sin by Bill 101. We must let go of
+          xenophobia to attract the best talent on Earth and to develop the intellectual curiosity needed to meet the
+          climate challenge.
+        </p>
+      </div>
     </details>
     <div class="page-header" style="margin-top: 0; background: rgb(178, 178, 178);">
       <p class="page-header-text" style="color: black;">POLICIES BY TOPIC</p>
@@ -82,6 +171,12 @@ summary {
 
 summary::-webkit-details-marker {
   display: none;
+}
+
+.platform-img {
+  object-fit: cover;
+  height: 300px;
+  width: 100%;
 }
 </style>
 
