@@ -143,41 +143,97 @@
     </div>
 
     <ul style="display: flex; flex-direction: column;">
-      <li style="display: flex; flex-direction: row;">
+
+      <li @click="clickTopic('pandemic')" style="display: flex; flex-direction: row; margin-top: 10px;">
         <div style="display: flex; width: 50px;"><img style="margin: auto;"
             :src="require('@/assets/carbon_coronavirus.svg')" alt="COVID Virus"></div>
         <span class="topic-title">COVID-19 Pandemic</span>
       </li>
-      <li style="display: flex; flex-direction: row;">
+      <p ref="pandemic" class="page-description-text hidden-description">
+        Maintain the integrity of our healthcare network. Guarantee as much freedom as possible.
+        <br>
+        <br>
+        <router-link to="/platform-detailed#pandemic" class="call-to-action-button">
+          <p class="call-to-action-button-text">LEARN MORE</p>
+        </router-link>
+      </p>
+
+      <li @click="clickTopic('economy')" style="display: flex; flex-direction: row;">
         <div style="display: flex; width: 50px;"><img style="margin: auto;" :src="require('@/assets/money.svg')"
             alt="Banknote">
         </div>
         <span class="topic-title">Economy</span>
       </li>
-      <li style="display: flex; flex-direction: row;">
+      <p ref="economy" class="page-description-text hidden-description">
+        Recover from COVID in a fair and equitable way. Facilitate free entreprise.
+        Create opportunities.
+        <br>
+        <br>
+        <router-link to="/platform-detailed#economy" class="call-to-action-button">
+          <p class="call-to-action-button-text">LEARN MORE</p>
+        </router-link>
+      </p>
+
+      <li @click="clickTopic('society')" style="display: flex; flex-direction: row;">
         <div style="display: flex; width: 50px;"><img style="margin: auto;" :src="require('@/assets/justice.svg')"
             alt="Scale">
         </div>
         <span class="topic-title">Society</span>
       </li>
-      <li style="display: flex; flex-direction: row;">
+      <p ref="society" class="page-description-text hidden-description">
+        Fight systemic racism. Support our LGBTQ+. Uphold freedom of religion and speech. No more Bill 21 & 101.
+        <br>
+        <br>
+        <router-link to="/platform-detailed#society" class="call-to-action-button">
+          <p class="call-to-action-button-text">LEARN MORE</p>
+        </router-link>
+      </p>
+
+      <li @click="clickTopic('culture')" style="display: flex; flex-direction: row;">
         <div style="display: flex; width: 50px;"><img style="margin: auto;" :src="require('@/assets/palette.svg')"
             alt="Palette paint">
         </div>
         <span class="topic-title">Culture</span>
       </li>
-      <li style="display: flex; flex-direction: row;">
+      <p ref="culture" class="page-description-text hidden-description">
+        Embrace multiculturalism. Fund our social media creators. Empower the individual.
+        <br>
+        <br>
+        <router-link to="/platform-detailed#culture" class="call-to-action-button">
+          <p class="call-to-action-button-text">LEARN MORE</p>
+        </router-link>
+      </p>
+
+      <li @click="clickTopic('environment')" style="display: flex; flex-direction: row;">
         <div style="display: flex; width: 50px;"><img style="margin: auto;" :src="require('@/assets/thermostat.svg')"
             alt="Thermostat">
         </div>
         <span class="topic-title">Environment</span>
       </li>
-      <li style="display: flex; flex-direction: row;">
+      <p ref="environment" class="page-description-text hidden-description">
+        Reduce our emissions ASAP as required by the Paris accord. Prepare for natural disasters. Invest in innovation.
+        <br>
+        <br>
+        <router-link to="/platform-detailed#environment" class="call-to-action-button">
+          <p class="call-to-action-button-text">LEARN MORE</p>
+        </router-link>
+      </p>
+
+      <li @click="clickTopic('relations')" style="display: flex; flex-direction: row;">
         <div style="display: flex; width: 50px;"><img style="margin: auto;" :src="require('@/assets/globe.svg')"
             alt="Globe">
         </div>
         <span class="topic-title">Out-of-Province Relations</span>
       </li>
+      <p ref="relations" class="page-description-text hidden-description">
+        Remain in Canada. Give immigration back to the federal
+        government. Shut down Quebec “embassies” abroad.
+        <br>
+        <br>
+        <router-link to="/platform-detailed#relations" class="call-to-action-button">
+          <p class="call-to-action-button-text">LEARN MORE</p>
+        </router-link>
+      </p>
     </ul>
   </div>
 </template>
@@ -246,6 +302,17 @@ summary::-webkit-details-marker {
 
   padding: 10px;
 }
+
+.topic-title:hover {
+  cursor: pointer;
+}
+
+.hidden-description {
+  display: none;
+  transition: all 0.3s;
+
+  padding: 10px;
+}
 </style>
 
 <script lang="ts">
@@ -262,6 +329,17 @@ export default class Platform extends Vue {
     // signature background
     const background = document.body;
     background?.classList.remove("platform-background");
+  }
+
+  // expand or collapse the description
+  clickTopic(topic_id: string): void {
+    var description = this.$refs[topic_id] as HTMLElement;
+    if (description.style.display == "none" || description.style.display == "") {
+      description.style.display = "block";
+    }
+    else {
+      description.style.display = "none";
+    }
   }
 }
 </script>
