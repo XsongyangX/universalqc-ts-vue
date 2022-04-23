@@ -19,7 +19,7 @@
 
   <div style="background-color: white; display: flex; flex-direction: column;">
     <!-- UBI -->
-    <details>
+    <details id="UBI">
       <summary>
         <p class="page-header-text">UNIVERSAL BASIC INCOME (UBI)</p>
         <span class="icon"><img src="@/assets/to_expand.svg" alt="Indicator for expansion"></span>
@@ -58,7 +58,7 @@
       </div>
     </details>
     <!-- Language -->
-    <details>
+    <details id="language">
       <summary>
         <p class="page-header-text">LANGUAGE FREEDOM</p>
         <span class="icon"><img src="@/assets/to_expand.svg" alt="Indicator for expansion"></span>
@@ -98,7 +98,7 @@
       </div>
     </details>
     <!-- Climate change -->
-    <details>
+    <details id="climate">
       <summary>
         <p class="page-header-text">CLIMATE CHANGE</p>
         <span class="icon"><img src="@/assets/to_expand.svg" alt="Indicator for expansion"></span>

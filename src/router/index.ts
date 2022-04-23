@@ -47,11 +47,15 @@ const router = createRouter({
   history: createWebHashHistory(),
   routes: routes,
   scrollBehavior: function (to, from, savedPosition) {
-    return new Promise((resolve, reject) => {
-      setTimeout(() => {
-        resolve({ left: 0, top: 0 })
-      }, 0)
-    })
+    if (to.hash) {
+      return { el: to.hash }
+    } else {
+      return new Promise((resolve, reject) => {
+        setTimeout(() => {
+          resolve({ left: 0, top: 0 })
+        }, 0)
+      })
+    }
   }
 })
 
