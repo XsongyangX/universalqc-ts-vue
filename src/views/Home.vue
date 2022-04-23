@@ -2,15 +2,10 @@
   <div class="panel-page">
     <div class="panel-title fade-in">UNIVERSAL</div>
     <div class="landing-panel">
-      <p
-        class="panel-text panel-margin"
-        style="animation: appear-up-text 1s 1s forwards;"
-      >Everyone deserves a promising, open and free future.</p>
-      <a
-        class="panel-button panel-margin"
-        @click="scrollMeTo('leader-message')"
-        style="text-decoration: none; cursor:pointer;"
-      >
+      <p class="panel-text panel-margin" style="animation: appear-up-text 1s 1s forwards;">Everyone deserves a
+        promising, open and free future.</p>
+      <a class="panel-button panel-margin" @click="scrollMeTo('leader-message')"
+        style="text-decoration: none; cursor:pointer;">
         <p class="panel-button-text">LEARN MORE</p>
       </a>
     </div>
@@ -77,7 +72,8 @@
       <div class="panel-line"></div>
       <div class="profile-description-text">
         <p class="panel-text">
-          The Universal Party values individual rights. Each one of us is unique. That’s what makes life worth living for.
+          The Universal Party values individual rights. Each one of us is unique. That’s what makes life worth living
+          for.
           <br />
           <br />Quebec has put collective identity too far. We commit to the abolition of
           <b>Bill 21 and Bill 101</b>.
@@ -90,25 +86,20 @@
     </div>
   </div>
   <div class="panel-page call-to-sign">
-    <div
-      class="panel-summary"
-      style="background: #C4C4C4; opacity: 0.95; flex-direction: column; padding-top: 5%; padding-bottom: 5%;"
-    >
+    <div class="panel-summary"
+      style="background: #C4C4C4; opacity: 0.95; flex-direction: column; padding-top: 5%; padding-bottom: 5%;">
       <p class="principle-title" style="margin-bottom: 10px;">HELP US REGISTER!</p>
 
-      <p
-        class="call-to-action-text"
-      >The party needs 100 signatures from all of Quebec to be officially authorized in the election.</p>
+      <p class="call-to-action-text">The party needs 100 signatures from all of Quebec to be officially authorized in
+        the election.</p>
       <router-link to="/sign-up" class="proposal-button">
         <p class="proposal-button-text">SIGN UP</p>
       </router-link>
     </div>
   </div>
   <div class="panel-page email-subscription">
-    <div
-      class="panel-summary"
-      style="background: #C4C4C4; opacity: 0.95; flex-direction: column; padding-top: 5%; padding-bottom: 5%;"
-    >
+    <div class="panel-summary"
+      style="background: #C4C4C4; opacity: 0.95; flex-direction: column; padding-top: 5%; padding-bottom: 5%;">
       <p class="principle-title" style="margin-bottom: 10px;">SUBSCRIBE TO OUR NEWSLETTER</p>
       <input type="email" placeholder="sophie@example.com" style="margin: 5%;" />
       <div class="proposal-button">
@@ -167,6 +158,7 @@ body {
   0% {
     opacity: 0;
   }
+
   100% {
     opacity: 0.9;
   }
@@ -457,8 +449,7 @@ body {
 }
 
 .invert-svg {
-  filter: invert(100%) sepia(86%) saturate(60%) hue-rotate(261deg)
-    brightness(111%) contrast(100%);
+  filter: invert(100%) sepia(86%) saturate(60%) hue-rotate(261deg) brightness(111%) contrast(100%);
 }
 </style>
 
