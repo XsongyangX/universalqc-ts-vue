@@ -137,9 +137,48 @@
         </p>
       </div>
     </details>
+
     <div class="page-header" style="margin-top: 0; background: rgb(178, 178, 178);">
       <p class="page-header-text" style="color: black;">POLICIES BY TOPIC</p>
     </div>
+
+    <ul style="display: flex; flex-direction: column;">
+      <li style="display: flex; flex-direction: row;">
+        <div style="display: flex; width: 50px;"><img style="margin: auto;"
+            :src="require('@/assets/carbon_coronavirus.svg')" alt="COVID Virus"></div>
+        <span class="topic-title">COVID-19 Pandemic</span>
+      </li>
+      <li style="display: flex; flex-direction: row;">
+        <div style="display: flex; width: 50px;"><img style="margin: auto;" :src="require('@/assets/money.svg')"
+            alt="Banknote">
+        </div>
+        <span class="topic-title">Economy</span>
+      </li>
+      <li style="display: flex; flex-direction: row;">
+        <div style="display: flex; width: 50px;"><img style="margin: auto;" :src="require('@/assets/justice.svg')"
+            alt="Scale">
+        </div>
+        <span class="topic-title">Society</span>
+      </li>
+      <li style="display: flex; flex-direction: row;">
+        <div style="display: flex; width: 50px;"><img style="margin: auto;" :src="require('@/assets/palette.svg')"
+            alt="Palette paint">
+        </div>
+        <span class="topic-title">Culture</span>
+      </li>
+      <li style="display: flex; flex-direction: row;">
+        <div style="display: flex; width: 50px;"><img style="margin: auto;" :src="require('@/assets/thermostat.svg')"
+            alt="Thermostat">
+        </div>
+        <span class="topic-title">Environment</span>
+      </li>
+      <li style="display: flex; flex-direction: row;">
+        <div style="display: flex; width: 50px;"><img style="margin: auto;" :src="require('@/assets/globe.svg')"
+            alt="Globe">
+        </div>
+        <span class="topic-title">Out-of-Province Relations</span>
+      </li>
+    </ul>
   </div>
 </template>
 
@@ -189,6 +228,23 @@ summary::-webkit-details-marker {
   background-position: 85% 100%;
 
   z-index: -1;
+}
+
+.topic-title {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 33px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+
+  color: #000000;
+
+  margin: auto;
+
+  padding: 10px;
 }
 </style>
 
