@@ -82,6 +82,10 @@
           SONG YANG
           <br />Founder, Leader
         </p>
+        <p class="panel-text"><i>
+            For the entire platform, click <router-link to="/platform" style="color: white;">here
+            </router-link>.
+          </i></p>
       </div>
     </div>
   </div>
