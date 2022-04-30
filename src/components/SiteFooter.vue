@@ -4,8 +4,8 @@
             <router-link to="/" class="clickable-link">UNIVERSAL PARTY</router-link>
         </p>
         <p class="footer-description footer-padding">
-            <router-link to="/news" class="clickable-link">News</router-link>
-            <br />
+            <!-- <router-link to="/news" class="clickable-link">News</router-link>
+            <br /> -->
             <router-link to="/platform" class="clickable-link">Platform</router-link>
             <br />
             <router-link to="/candidates" class="clickable-link">Candidates</router-link>
@@ -28,6 +28,7 @@
     display: flex;
     flex-direction: column;
 }
+
 .footer-padding {
     padding-left: 35px;
     padding-top: 22px;

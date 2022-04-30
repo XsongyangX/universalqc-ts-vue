@@ -14,9 +14,9 @@
       </router-link>
       <img @click="closeNav()" class="close-button" :src="require('@/assets/close_button.svg')" alt="Logo of the party">
     </div>
-    <router-link class="sidenav-item" to="/news" @click="closeNav()">
+    <!-- <router-link class="sidenav-item" to="/news" @click="closeNav()">
       <p class="sidenav-item-text">NEWS</p>
-    </router-link>
+    </router-link> -->
     <router-link class="sidenav-item" to="/platform" @click="closeNav()">
       <p class="sidenav-item-text">PLATFORM</p>
     </router-link>
