@@ -1,9 +1,38 @@
 <template>
-  <div class="fade-in-delayed">
+  <div class="wide-nav">
+    <ul class="fade-in-delayed">
+      <li>
+        <router-link to="/"><img :src="require('@/assets/logo.png')" id="logo" alt="The Logo of the Universal Party" />
+        </router-link>
+      </li>
+      <li style="display: flex;">
+        <router-link to="/platform" class="navbar-text">PLATFORM</router-link>
+      </li>
+      <li style="display: flex;">
+        <router-link to="/candidates" class="navbar-text">CANDIDATES</router-link>
+      </li>
+      <li style="display: flex;">
+        <router-link to="/donate-and-volunteer" class="navbar-text">DONATE</router-link>
+      </li>
+      <li style="display: flex;">
+        <router-link to="/contact" class="navbar-text">CONTACT</router-link>
+      </li>
+      <li style="display: flex;">
+        <router-link to="/about" class="navbar-text">ABOUT</router-link>
+      </li>
+      <li style="float:right"><img @click="openNav()" :src="require('@/assets/menu icon.svg')" id="menu"
+          alt="Menu display button" /></li>
+    </ul>
+  </div>
+
+  <div class="mobile-nav">
     <router-link to="/"><img :src="require('@/assets/logo.png')" id="logo" alt="The Logo of the Universal Party" />
     </router-link>
-    <img @click="openNav()" :src="require('@/assets/menu icon.svg')" id="menu" alt="Menu display button" />
+    <img style="float: right;" @click="openNav()" :src="require('@/assets/menu icon.svg')" id="menu"
+      alt="Menu display button" />
   </div>
+
+  <!-- PULL OUT -->
   <div ref="pullout" class="sidenav">
     <div class="sidenav-header">
       <router-link @click="closeNav()" to="/"><img :src="require('@/assets/logo.png')"
@@ -70,20 +99,58 @@ $navbar-height: 61px; // height of the logo
   }
 }
 
-#logo {
-  position: absolute;
-  left: 0;
-  top: 0;
-}
+#logo {}
 
-#menu {
-  position: absolute;
-  right: 0;
-  top: 0;
-}
+#menu {}
 
 #menu:hover {
   cursor: pointer;
+}
+
+// https://www.w3schools.com/css/tryit.asp?filename=trycss_navbar_horizontal_black_right
+@media only screen and (min-width: 675px) {
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: white;
+  }
+
+  li {
+    float: left;
+  }
+
+  .active {
+    background-color: #04AA6D;
+  }
+
+  .navbar-text {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 49px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    color: #000000;
+
+    margin: auto;
+    text-decoration: none;
+    padding-left: 10px;
+  }
+
+  .mobile-nav {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 675px) {
+  ul {
+    display: none;
+  }
 }
 
 // https://www.w3schools.com/howto/howto_js_sidenav.asp
@@ -176,7 +243,7 @@ import { Vue } from "vue-class-component";
 export default class SiteNavigation extends Vue {
   /* Set the width of the side navigation to 375px */
   openNav(): void {
-    (this.$refs.pullout as HTMLElement).style.width = "100%";
+    (this.$refs.pullout as HTMLElement).style.width = "375px";
   }
 
   /* Set the width of the side navigation to 0 */
