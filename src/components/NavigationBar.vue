@@ -26,10 +26,15 @@
   </div>
 
   <div class="mobile-nav">
-    <router-link to="/"><img :src="require('@/assets/logo.png')" id="logo" alt="The Logo of the Universal Party" />
-    </router-link>
-    <img style="float: right;" @click="openNav()" :src="require('@/assets/menu icon.svg')" id="menu"
-      alt="Menu display button" />
+    <ul class="fade-in-delayed">
+      <li>
+        <router-link to="/"><img :src="require('@/assets/logo.png')" id="logo" alt="The Logo of the Universal Party" />
+        </router-link>
+      </li>
+      <li style="float: right;">
+        <img @click="openNav()" :src="require('@/assets/menu icon.svg')" id="menu" alt="Menu display button" />
+      </li>
+    </ul>
   </div>
 
   <!-- PULL OUT -->
@@ -115,6 +120,7 @@ $navbar-height: 61px; // height of the logo
     padding: 0;
     overflow: hidden;
     background-color: white;
+    height: 60px;
   }
 
   li {
@@ -148,9 +154,29 @@ $navbar-height: 61px; // height of the logo
 }
 
 @media only screen and (max-width: 675px) {
-  ul {
+
+  .wide-nav {
     display: none;
   }
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+
+  li {
+    float: left;
+  }
+}
+
+.mobile-nav {
+  position: fixed;
+}
+
+.wide-nav {
+  position: fixed;
 }
 
 // https://www.w3schools.com/howto/howto_js_sidenav.asp
