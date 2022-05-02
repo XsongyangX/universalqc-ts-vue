@@ -10,7 +10,7 @@
       </a>
     </div>
   </div>
-  <div ref="leader-message" class="panel-page" style="background: rgba(119, 51, 222, 0.9);">
+  <div ref="leader-message" id="leader-message" class="panel-page" style="background: rgba(119, 51, 222, 0.9);">
     <div class="profile-photo">
       <div class="outer-circle">
         <img class="inner-circle" :src="require('@/assets/selfie 480x480.jpg')" />
@@ -39,6 +39,7 @@
   <div class="panel-page ubi">
     <div class="proposal-panel">
       <p class="principle-title">UNIVERSAL BASIC INCOME</p>
+      <p class="call-to-action-text">$1200 per month for every adult, no strings attached. Your money, your choice.</p>
       <router-link to="/platform#UBI" class="proposal-button">
         <p class="proposal-button-text">LEARN MORE</p>
       </router-link>
@@ -47,6 +48,8 @@
   <div class="panel-page language">
     <div class="proposal-panel">
       <p class="principle-title">LANGUAGE FREEDOM</p>
+      <p class="call-to-action-text">A corollary of freedom of speech. Choose your own language(s). No more language
+        laws.</p>
       <router-link to="/platform#language" class="proposal-button">
         <p class="proposal-button-text">LEARN MORE</p>
       </router-link>
@@ -55,12 +58,13 @@
   <div class="panel-page climate">
     <div class="proposal-panel" style="margin-top: 0; height: 40%; padding-top: 5%;">
       <p class="principle-title">CLIMATE CHANGE</p>
+      <p class="call-to-action-text">Secure a healthy climate for our future and our children’s future.</p>
       <router-link to="/platform#climate" class="proposal-button">
         <p class="proposal-button-text">LEARN MORE</p>
       </router-link>
     </div>
   </div>
-  <div class="panel-page" style="background: rgba(119, 51, 222, 0.9);">
+  <div class="panel-page" id="summary-panel" style="background: rgba(119, 51, 222, 0.9);">
     <div class="panel-summary">
       <p class="panel-summary-text">
         UNIVERSAL BASIC INCOME
@@ -359,6 +363,11 @@ body {
 
   display: flex;
   flex-direction: column;
+
+  @media only screen and (min-width: 572px) {
+    margin-left: 10%;
+    width: 500px;
+  }
 }
 
 .proposal-button {
@@ -371,6 +380,8 @@ body {
   display: flex;
 
   text-decoration: none;
+
+  margin-bottom: 20px;
 }
 
 .proposal-button-text {
@@ -465,6 +476,20 @@ body {
 
 .invert-svg {
   filter: invert(100%) sepia(86%) saturate(60%) hue-rotate(261deg) brightness(111%) contrast(100%);
+}
+
+#leader-message {
+  @media only screen and (min-width: 435px) {
+    margin-left: 10%;
+    width: 375px;
+  }
+}
+
+#summary-panel {
+  @media only screen and (min-width: 435px) {
+    margin-left: 10%;
+    width: 375px;
+  }
 }
 </style>
 
