@@ -148,6 +148,8 @@ body {
   color: #ffffff;
 
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.28);
+
+  z-index: -1;
 }
 
 .fade-in {
@@ -178,6 +180,13 @@ body {
   background: rgba(143, 96, 220, 0);
 
   padding-bottom: 20px;
+
+  @media only screen and (min-width: 435px) {
+    margin-left: 10%;
+    width: 375px;
+  }
+
+  z-index: -1;
 }
 
 @keyframes appear-up {
@@ -400,6 +409,8 @@ body {
   background: rgba(255, 255, 255, 0.89);
 
   display: flex;
+
+  z-index: 0;
 }
 
 .panel-summary-text {

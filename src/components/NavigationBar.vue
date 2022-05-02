@@ -113,7 +113,7 @@ $navbar-height: 61px; // height of the logo
 }
 
 // https://www.w3schools.com/css/tryit.asp?filename=trycss_navbar_horizontal_black_right
-@media only screen and (min-width: 675px) {
+@media only screen and (min-width: 730px) {
   ul {
     list-style-type: none;
     margin: 0;
@@ -146,6 +146,7 @@ $navbar-height: 61px; // height of the logo
     margin: auto;
     text-decoration: none;
     padding-left: 10px;
+    padding-right: 10px;
   }
 
   .mobile-nav {
@@ -153,7 +154,7 @@ $navbar-height: 61px; // height of the logo
   }
 }
 
-@media only screen and (max-width: 675px) {
+@media only screen and (max-width: 730px) {
 
   .wide-nav {
     display: none;
@@ -177,6 +178,7 @@ $navbar-height: 61px; // height of the logo
 
 .wide-nav {
   position: fixed;
+  z-index: 1;
 }
 
 // https://www.w3schools.com/howto/howto_js_sidenav.asp
