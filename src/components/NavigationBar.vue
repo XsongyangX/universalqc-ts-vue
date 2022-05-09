@@ -1,5 +1,5 @@
 <template>
-  <div class="wide-nav">
+  <div class="wide-nav" style="z-index: 5;">
     <ul class="fade-in-delayed">
       <li>
         <router-link to="/"><img :src="require('@/assets/logo.png')" id="logo" alt="The Logo of the Universal Party" />
@@ -20,12 +20,12 @@
       <li style="display: flex;">
         <router-link to="/about" class="navbar-text">ABOUT</router-link>
       </li>
-      <li style="float:right"><img @click="openNav()" :src="require('@/assets/menu icon.svg')" id="menu"
+      <li style="float:right"><img @click="openNav()" :src="require('@/assets/menu icon.svg')"
           alt="Menu display button" /></li>
     </ul>
   </div>
 
-  <div class="mobile-nav">
+  <div class="mobile-nav" style="z-index: 5;">
     <ul class="fade-in-delayed">
       <li>
         <router-link to="/"><img :src="require('@/assets/logo.png')" id="logo" alt="The Logo of the Universal Party" />

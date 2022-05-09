@@ -94,8 +94,7 @@
     </div>
   </div>
   <div class="panel-page call-to-sign">
-    <div class="panel-summary"
-      style="background: #C4C4C4; opacity: 0.95; flex-direction: column; padding-top: 5%; padding-bottom: 5%;">
+    <div class="panel-summary call-to-sign-panel">
       <p class="principle-title" style="margin-bottom: 10px;">HELP US REGISTER!</p>
 
       <p class="call-to-action-text">The party needs 100 signatures from all of Quebec to be officially authorized in
@@ -106,10 +105,10 @@
     </div>
   </div>
   <div class="panel-page email-subscription">
-    <div class="panel-summary"
-      style="background: #C4C4C4; opacity: 0.95; flex-direction: column; padding-top: 5%; padding-bottom: 5%;">
+    <div class="panel-summary email-panel">
       <p class="principle-title" style="margin-bottom: 10px;">SUBSCRIBE TO OUR NEWSLETTER</p>
-      <input type="email" placeholder="sophie@example.com" style="margin: 5%;" />
+      <input type="email" placeholder="sophie@example.com"
+        style="margin-bottom: 20px; min-width: 40%; max-width: 400px; margin-left: auto; margin-right: auto;" />
       <div class="proposal-button">
         <p class="proposal-button-text">SUBSCRIBE</p>
       </div>
@@ -329,6 +328,12 @@ body {
 
   display: flex;
   flex-direction: column;
+
+  @media only screen and (min-width: 1018px) {
+    width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 .principle-title {
@@ -373,7 +378,7 @@ body {
 .proposal-button {
   margin: auto;
 
-  padding: 3%;
+  padding: 20px;
 
   background: rgba(143, 96, 220, 0.85);
 
@@ -489,6 +494,36 @@ body {
   @media only screen and (min-width: 435px) {
     margin-left: 10%;
     width: 375px;
+  }
+}
+
+.call-to-sign-panel {
+  background: #C4C4C4;
+  opacity: 0.95;
+  flex-direction: column;
+  padding-top: 30px;
+  padding-bottom: 30px;
+
+  z-index: 0;
+
+  @media only screen and (min-width: 1018px) {
+    width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.email-panel {
+  background: #C4C4C4;
+  opacity: 0.95;
+  flex-direction: column;
+  padding-top: 30px;
+  padding-bottom: 30px;
+
+  @media only screen and (min-width: 790px) {
+    width: 768px;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 </style>
