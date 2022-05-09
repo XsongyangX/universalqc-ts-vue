@@ -20,8 +20,9 @@
       <li style="display: flex;">
         <router-link to="/about" class="navbar-text">ABOUT</router-link>
       </li>
-      <li style="float:right"><img @click="openNav()" :src="require('@/assets/menu icon.svg')"
-          alt="Menu display button" /></li>
+      <li style="float:right">
+        <p class="navbar-text">EN | FR</p>
+      </li>
     </ul>
   </div>
 
@@ -113,7 +114,7 @@ $navbar-height: 61px; // height of the logo
 }
 
 // https://www.w3schools.com/css/tryit.asp?filename=trycss_navbar_horizontal_black_right
-@media only screen and (min-width: 730px) {
+@media only screen and (min-width: 757px) {
   ul {
     list-style-type: none;
     margin: 0;
@@ -154,7 +155,7 @@ $navbar-height: 61px; // height of the logo
   }
 }
 
-@media only screen and (max-width: 730px) {
+@media only screen and (max-width: 756px) {
 
   .wide-nav {
     display: none;
