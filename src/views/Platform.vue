@@ -1,16 +1,27 @@
 <template>
-  <div class="about-page">
+  <div class="about-page mobile-only">
     <div class="page-header">
       <p class="page-header-text">PARTY PLATFORM</p>
     </div>
   </div>
   <!-- Leave a margin for the background -->
-  <div class="page-description-box" style="margin-top: 275px;">
+  <div class="page-description-box mobile-only" style="margin-top: 275px;">
     <p class="page-description-large-text">
       In our vision, Quebec is a province where all can reach their full human potential and have a healthy environment
       for the future.
     </p>
   </div>
+
+  <div class="about-page desktop-only" style="height: 100vh;">
+    <div class="page-description-box desktop-only" style="margin-top: 50vh; margin-left: 20px; width: 500px; max-height: 50vh;">
+    <p class="principle-title" style="margin-bottom: 10px;">PARTY PLATFORM</p>
+    <p class="page-description-large-text" style="text-align: left;">
+      In our vision, Quebec is a province where all can reach their full human potential and have a healthy environment
+      for the future.
+    </p>
+  </div>
+  </div>
+
   <div class="page-minor-header" style="background-color: rgba(241, 234, 249, 0.97);">
     <p class="page-minor-header-text" style="font-weight: 700;">
       KEY PROPOSALS
@@ -273,18 +284,7 @@ summary::-webkit-details-marker {
   height: 300px;
   width: 100%;
 }
-</style>
 
-<style lang="scss">
-.platform-background {
-  background-image: url("~@/assets/tech meeting flipped.jpg");
-  background-attachment: fixed;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: 85% 100%;
-
-  z-index: -1;
-}
 
 .topic-title {
   font-family: 'Open Sans';
@@ -313,6 +313,31 @@ summary::-webkit-details-marker {
 
   padding: 10px;
 }
+
+.mobile-only {
+  @media only screen and (min-width: 701px) {
+    display: none;
+  }
+}
+
+.desktop-only {
+  @media only screen and (max-width: 700px) {
+    display: none;
+  }
+}
+</style>
+
+<style lang="scss">
+.platform-background {
+  background-image: url("~@/assets/tech meeting flipped.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 85% 100%;
+
+  z-index: -1;
+}
+
 </style>
 
 <script lang="ts">
