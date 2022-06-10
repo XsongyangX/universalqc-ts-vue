@@ -258,22 +258,33 @@
 
   <!-- Proposals -->
   <div class="desktop-only">
-    <div class="about-page"
-      style="height: 100vh; background-color: white; display: flex; flex-direction: row; position: relative;">
-      <div class="" style="flex: 40%; margin-top: 20vh; margin-left: 10vh;">
-        <p class="principle-title" style="text-align: left;">UNIVERSAL BASIC INCOME (UBI)</p>
-        <p class="page-description-text">Automation, end of poverty, financial freedom, entrepreneurship. <br><br> A
-          move
-          of the
-          21st century.</p>
-      </div>
-      <div style="flex: 60%; margin-top: 15vh; margin-left: 10vh;">
-        <div style="background-color: #8F60DC; max-width: 400px;">
-          <img :src="require('@/assets/robot handshake.jpg')" alt="Robot handshake" style="max-height: 370px; max-width: 375px;
-          position: relative; top: -30px; left: -30px;
-          filter: drop-shadow(10px 10px 4px rgba(0, 0, 0, 0.25));">
+
+    <!-- UBI -->
+    <div class="about-page" style="background-color: white;">
+      <div class="desktop-proposal-page" style="padding-bottom: 5vh;">
+        <div style="flex: 40%; margin-top: 20vh; margin-left: 10vh;">
+          <p class="principle-title" style="text-align: left;">UNIVERSAL BASIC INCOME (UBI)</p>
+          <p class="page-description-text">Automation, end of poverty, financial freedom, entrepreneurship. <br><br> A
+            move of the 21st century.</p>
+        </div>
+        <div style="flex: 60%; margin-top: 15vh; margin-left: 10vh;">
+          <div style="background-color: #8F60DC; max-width: 400px;">
+            <img class="desktop-proposal-image" :src="require('@/assets/robot handshake.jpg')" alt="Robot handshake">
+          </div>
         </div>
       </div>
+      <!-- Expanded info -->
+      <details id="UBI">
+        <summary style="width: 320px; height: 75px; margin: auto;">
+          <p class="page-header-text">TELL ME MORE</p>
+          <span class="icon"><img src="@/assets/to_expand.svg" alt="Indicator for expansion"></span>
+        </summary>
+      </details>
+    </div>
+
+    <!-- Language -->
+    <div class="about-page desktop-proposal-page">
+      LANGUAGE
     </div>
   </div>
 </template>
@@ -356,6 +367,22 @@ summary::-webkit-details-marker {
 }
 
 // DESKTOP SPECIFIC
+.desktop-proposal-image {
+  max-height: 370px;
+  max-width: 375px;
+  position: relative;
+  top: -30px;
+  left: -30px;
+  filter: drop-shadow(10px 10px 4px rgba(0, 0, 0, 0.25));
+}
+
+.desktop-proposal-page {
+  // height: 100vh;
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+}
 </style>
 <style lang="scss">
 .platform-background {
