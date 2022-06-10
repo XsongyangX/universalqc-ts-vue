@@ -1,23 +1,21 @@
 <template>
   <div class="panel-page">
-    <div class="panel-title fade-in">UNIVERSAL</div>
+     <h1 class="panel-title fade-in">Universal Party</h1>
     <div class="landing-panel">
-      <p class="panel-text panel-margin" style="animation: appear-up-text 1s 1s forwards;">Everyone deserves a
-        promising, open and free future.</p>
-      <a class="panel-button panel-margin" @click="scrollMeTo('leader-message')"
-        style="text-decoration: none; cursor:pointer;">
-        <p class="panel-button-text">LEARN MORE</p>
+      <h2 class="panel-text panel-margin" style="animation: appear-up-text 1s 1s forwards;">Everyone deserves a
+        promising, open and free future.</h2>
+      <a class="panel-button panel-margin" type="button" @click="scrollMeTo('leader-message')">
+        Learn more
       </a>
     </div>
   </div>
   <div ref="leader-message" id="leader-message" class="panel-page" style="background: rgba(119, 51, 222, 0.9);">
     <div class="profile-photo">
       <div class="outer-circle">
-        <img class="inner-circle" :src="require('@/assets/selfie 480x480.jpg')" />
+        <img class="inner-circle" alt="Song Yang, Universal Party leader" :src="require('@/assets/selfie 480x480.jpg')" />
       </div>
     </div>
     <div class="profile-description">
-      <div class="panel-line"></div>
       <div class="profile-description-text">
         <p class="panel-text" style="font-weight: 300;">
           The Universal Party is a federalist, center-left party with a libertarian touch.
@@ -29,11 +27,6 @@
           <br />Founder, Leader
         </p>
       </div>
-    </div>
-  </div>
-  <div class="panel-page">
-    <div class="principle-panel">
-      <p class="principle-title">PRINCIPLES</p>
     </div>
   </div>
   <div class="panel-page ubi">
@@ -56,7 +49,7 @@
     </div>
   </div>
   <div class="panel-page climate">
-    <div class="proposal-panel" style="margin-top: 0; height: 40%; padding-top: 5%;">
+    <div class="proposal-panel">
       <p class="principle-title">CLIMATE CHANGE</p>
       <p class="call-to-action-text">Secure a healthy climate for our future and our children’s future.</p>
       <router-link to="/platform#climate" class="proposal-button">
@@ -86,10 +79,7 @@
           SONG YANG
           <br />Founder, Leader
         </p>
-        <p class="panel-text"><i>
-            For the entire platform, click <router-link to="/platform" style="color: white;">here
-            </router-link>.
-          </i></p>
+        <router-link to="/platform" style="color:#fff;font-size:1.1rem;float: right;">View our entire platform</router-link>
       </div>
     </div>
   </div>
@@ -125,7 +115,14 @@ body {
   background-repeat: no-repeat;
   background-position: 50% 100%;
 
-  z-index: -1;
+  &::after {
+      content: '';
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color:#00000064;
+  }
 }
 
 .panel-page {
@@ -144,7 +141,7 @@ body {
   font-family: "Oswald", sans-serif;
   font-style: normal;
   font-weight: bold;
-  font-size: 48px;
+  font-size: 4rem;
   line-height: 71px;
   text-align: center;
 
@@ -152,7 +149,7 @@ body {
 
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.28);
 
-  z-index: -1;
+  z-index: 1;
 }
 
 .fade-in {
@@ -174,22 +171,17 @@ body {
 }
 
 .landing-panel {
-  flex-grow: 2;
-
   display: flex;
   flex-direction: column;
-
   animation: appear-up 1s 1s forwards;
-  background: rgba(143, 96, 220, 0);
-
   padding-bottom: 20px;
+  z-index: 1;
 
   @media only screen and (min-width: 435px) {
+    justify-content: center;
     margin-left: 10%;
-    width: 375px;
+    width: 80%;
   }
-
-  z-index: -1;
 }
 
 @keyframes appear-up {
@@ -200,10 +192,9 @@ body {
   }
 
   to {
-    background: rgba(143, 96, 220, 0.85);
-    opacity: 0.85;
+    opacity: 1;
     visibility: visible;
-    transform: translateY(0%);
+    transform: translateY(-40%);
   }
 }
 
@@ -218,10 +209,12 @@ body {
   font-family: "Open Sans", sans-serif;
   font-style: normal;
   font-weight: 400;
-  font-size: 20px;
   line-height: 27px;
-
   opacity: 0;
+
+    @media only screen and (min-width: 600px) {
+   text-align: center;
+  }
 }
 
 .onscroll-appearance {
@@ -236,12 +229,16 @@ body {
 }
 
 .panel-button {
-  display: flex;
-
-  width: 142px;
-  height: 39px;
-
+  align-self: center;
+  text-align: center;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  text-decoration: none;
   animation: appear-up-button 1s 1s forwards;
+
+  &:hover {
+    background-color:blue;
+  }
 }
 
 @keyframes appear-up-button {
@@ -273,9 +270,7 @@ body {
 // Second page: profile picture
 
 .profile-photo {
-  margin-top: 10vh; // top margin
-  margin-bottom: 2vh;
-  // flex-basis: 5vh; // bottom margin
+ margin: 10vh 2vw;
 }
 
 .outer-circle {
@@ -299,7 +294,14 @@ body {
 
 .profile-description {
   display: flex;
-  flex-direction: row;
+  justify-content: center;
+  margin: 0 auto;
+  width: 80%;
+  font-size: 1.1rem;
+
+  @media only screen and (min-width: 1018px) {
+    font-size: 1.5rem;
+  }
 }
 
 .panel-line {
@@ -309,13 +311,6 @@ body {
   margin-left: 10%;
   // margin-top: 5%;
   margin-right: 10%;
-}
-
-.profile-description-text {
-  padding-right: 40px;
-
-  display: flex;
-  flex-direction: column;
 }
 
 .principle-panel {
@@ -357,12 +352,13 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 62% 100%;
+  padding-bottom: 2vh;
 }
 
 .proposal-panel {
-  margin-top: 60vh;
+  margin-top: 73vh;
 
-  height: 100%;
+  height: 30%;
 
   background: rgba(241, 234, 249, 0.85);
 
@@ -371,6 +367,7 @@ body {
 
   @media only screen and (min-width: 572px) {
     margin-left: 10%;
+    margin-top: 40vh;
     width: 500px;
   }
 }
@@ -484,47 +481,30 @@ body {
 }
 
 #leader-message {
-  @media only screen and (min-width: 435px) {
-    margin-left: 10%;
-    width: 375px;
-  }
+    width: 100%;
 }
 
 #summary-panel {
+    width: 100%;
   @media only screen and (min-width: 435px) {
-    margin-left: 10%;
-    width: 375px;
+    width: 50%;
   }
 }
 
 .call-to-sign-panel {
-  background: #C4C4C4;
-  opacity: 0.95;
   flex-direction: column;
-  padding-top: 30px;
-  padding-bottom: 30px;
-
-  z-index: 0;
-
-  @media only screen and (min-width: 1018px) {
-    width: 1000px;
-    margin-left: auto;
-    margin-right: auto;
-  }
+  color: #fff;
+ padding: 30px;
+ width: 70%;
+ margin: 30vh auto;
 }
 
 .email-panel {
   background: #C4C4C4;
-  opacity: 0.95;
   flex-direction: column;
-  padding-top: 30px;
-  padding-bottom: 30px;
-
-  @media only screen and (min-width: 790px) {
-    width: 768px;
-    margin-left: auto;
-    margin-right: auto;
-  }
+ padding: 30px;
+ width: 70%;
+ margin: 30vh auto;
 }
 </style>
 
@@ -586,12 +566,12 @@ export default class Home extends Vue {
     colorObserver.observe(menuItem);
   }
 
-  // scrolling to sections
+    // scrolling to sections
   scrollMeTo(refName: string): void {
     var element = this.$refs[refName];
     var top = (element as HTMLElement).offsetTop;
-
     window.scrollTo(0, top);
   }
 }
+
 </script>
