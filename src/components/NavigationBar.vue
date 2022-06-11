@@ -191,7 +191,7 @@ $navbar-height: 61px; // height of the logo
   /* 0 width - change this with JavaScript */
   position: fixed;
   /* Stay in place */
-  z-index: 1;
+  z-index: 999;
   /* Stay on top */
   top: 0;
   /* Stay at the top */
