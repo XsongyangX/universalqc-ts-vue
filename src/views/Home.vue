@@ -1,111 +1,114 @@
 <template>
-<div class="home-page">
-  <div class="panel-page">
-     <h1 class="panel-title fade-in">Universal.</h1>
-    <div class="landing-panel">
-      <h2 class="panel-text panel-margin" style="animation: appear-up-text 1s 1s forwards;">Everyone deserves a
-        promising, open and free future.</h2>
-      <a class="panel-button panel-margin" type="button" @click="scrollMeTo('leader-message')">
-        Learn more
-      </a>
-    </div>
-  </div>
-  <div ref="leader-message" id="leader-message" class="panel-page" style="background: rgba(119, 51, 222, 0.9);">
-    <div class="profile-photo">
-      <div class="outer-circle">
-        <img class="inner-circle" alt="Song Yang, Universal Party leader" :src="require('@/assets/selfie 480x480.jpg')" />
+  <div class="home-page">
+    <div class="panel-page">
+      <h1 class="panel-title fade-in">Universal.</h1>
+      <div class="landing-panel">
+        <h2 class="panel-text panel-margin" style="animation: appear-up-text 1s 1s forwards;">Everyone deserves a
+          promising, open and free future.</h2>
+        <a class="panel-button panel-margin" type="button" @click="scrollMeTo('leader-message')">
+          Learn more
+        </a>
       </div>
     </div>
-    <div class="profile-description">
-      <div class="profile-description-text">
-        <p class="panel-text" style="font-weight: 300; line-height: 18px;">
-          The Universal Party is a federalist, center-left party with a libertarian touch.
-          <br />
-          <br />I created this party out of disappointment in the Quebec establishment.
-        </p>
-        <p class="panel-text" style="text-align: right; font-size: 1.3rem; font-weight: 600;">
-          Song Yang
-          <br />Founder, Leader
-        </p>
+    <div ref="leader-message" id="leader-message" class="panel-page" style="background: rgba(119, 51, 222, 0.9);">
+      <div class="profile-photo">
+        <div class="outer-circle">
+          <img class="inner-circle" alt="Song Yang, Universal Party leader"
+            :src="require('@/assets/selfie 480x480.jpg')" />
+        </div>
+      </div>
+      <div class="profile-description">
+        <div class="profile-description-text">
+          <p class="panel-text" style="font-weight: 300; line-height: 28px;">
+            The Universal Party is a federalist, center-left party with a libertarian touch.
+            <br />
+            <br />I created this party out of disappointment in the Quebec establishment.
+          </p>
+          <p class="panel-text" style="text-align: right; font-size: 1.3rem; font-weight: 600;">
+            Song Yang
+            <br />Founder, Leader
+          </p>
+        </div>
       </div>
     </div>
-  </div>
-  <div class="panel-page ubi">
-    <div class="proposal-panel">
-      <h2 class="principle-title">Universal Basic Income</h2>
-      <p class="call-to-action-text">$1200 per month for every adult, no strings attached. Your money, your choice.</p>
-      <router-link to="/platform#UBI" class="proposal-button">
-        <p class="proposal-button-text">Learn more</p>
-      </router-link>
-    </div>
-  </div>
-  <div class="panel-page language">
-    <div class="proposal-panel">
-      <h2 class="principle-title">Language Freedom</h2>
-      <p class="call-to-action-text">A corollary of freedom of speech. Choose your own language(s). No more language
-        laws.</p>
-      <router-link to="/platform#language" class="proposal-button">
-        <p class="proposal-button-text">Learn More</p>
-      </router-link>
-    </div>
-  </div>
-  <div class="panel-page climate">
-    <div class="proposal-panel">
-      <h2 class="principle-title">Climate Change</h2>
-      <p class="call-to-action-text">Secure a healthy climate for our future and our children’s future.</p>
-      <router-link to="/platform#climate" class="proposal-button">
-        <p class="proposal-button-text">Learn more</p>
-      </router-link>
-    </div>
-  </div>
-  <div class="panel-page" id="summary-panel" style="background: rgba(119, 51, 222, 0.9);">
-    <div class="panel-summary">
-      <p class="panel-summary-text">
-        UBI
-        <br />Language Freedom
-        <br />Climate Change
-      </p>
-    </div>
-    <div class="profile-description" style="padding-top: 5%;">
-      <div class="panel-line"></div>
-      <div class="profile-description-text">
-        <p class="panel-text">
-          The Universal Party values individual rights. Each one of us is unique. That’s what makes life worth living
-          for.
-          <br />
-          <br />Quebec has put collective identity too far. We commit to the abolition of
-          <b>Bill 21 and Bill 101</b>.
+    <div class="panel-page ubi">
+      <div class="proposal-panel">
+        <h2 class="principle-title">Universal Basic Income</h2>
+        <p class="call-to-action-text">$1200 per month for every adult, no strings attached. Your money, your choice.
         </p>
-        <p class="panel-text" style="text-align: right;">
-          SONG YANG
-          <br />Founder, Leader
-        </p>
-        <router-link to="/platform" style="color:#fff;font-size:1.1rem;float: right;">View our entire platform</router-link>
+        <router-link to="/platform#UBI" class="proposal-button">
+          <p class="proposal-button-text">Learn more</p>
+        </router-link>
       </div>
     </div>
-  </div>
-  <div class="panel-page call-to-sign">
-    <div class="panel-summary call-to-sign-panel">
-      <h2 class="principle-title" style="margin-bottom: 10px;">Help us register</h2>
+    <div class="panel-page language">
+      <div class="proposal-panel">
+        <h2 class="principle-title">Language Freedom</h2>
+        <p class="call-to-action-text">A corollary of freedom of speech. Choose your own language(s). No more language
+          laws.</p>
+        <router-link to="/platform#language" class="proposal-button">
+          <p class="proposal-button-text">Learn More</p>
+        </router-link>
+      </div>
+    </div>
+    <div class="panel-page climate">
+      <div class="proposal-panel">
+        <h2 class="principle-title">Climate Change</h2>
+        <p class="call-to-action-text">Secure a healthy climate for our future and our children’s future.</p>
+        <router-link to="/platform#climate" class="proposal-button">
+          <p class="proposal-button-text">Learn more</p>
+        </router-link>
+      </div>
+    </div>
+    <div class="panel-page" id="summary-panel" style="background: rgba(119, 51, 222, 0.9);">
+      <div class="panel-summary">
+        <p class="panel-summary-text">
+          UBI
+          <br />Language Freedom
+          <br />Climate Change
+        </p>
+      </div>
+      <div class="profile-description" style="padding-top: 5%;">
+        <div class="panel-line"></div>
+        <div class="profile-description-text">
+          <p class="panel-text">
+            The Universal Party values individual rights. Each one of us is unique. That’s what makes life worth living
+            for.
+            <br />
+            <br />Quebec has put collective identity too far. We commit to the abolition of
+            <b>Bill 21 and Bill 101</b>.
+          </p>
+          <p class="panel-text" style="text-align: right;">
+            SONG YANG
+            <br />Founder, Leader
+          </p>
+          <router-link to="/platform" style="color:#fff;font-size:1.1rem;float: right;">View our entire platform
+          </router-link>
+        </div>
+      </div>
+    </div>
+    <div class="panel-page call-to-sign">
+      <div class="panel-summary call-to-sign-panel">
+        <h2 class="principle-title" style="margin-bottom: 10px;">Help us register</h2>
 
-      <p class="call-to-action-text">The party needs 100 signatures from all of Quebec to be officially authorized in
-        the election.</p>
-      <router-link to="/sign-up" class="proposal-button">
-        <p class="proposal-button-text">Sign up</p>
-      </router-link>
+        <p class="call-to-action-text">The party needs 100 signatures from all of Quebec to be officially authorized in
+          the election.</p>
+        <router-link to="/sign-up" class="proposal-button">
+          <p class="proposal-button-text">Sign up</p>
+        </router-link>
+      </div>
     </div>
-  </div>
-  <div class="panel-page email-subscription">
-    <div class="panel-summary email-panel">
-      <h2 class="principle-title" style="margin-bottom: 10px;">Subscribe to our newsletter</h2>
-      <form class="newsletter-form">
-      <input type="email" placeholder="sophie@example.com" aria-label="Newsletter"/>
-      <button class="proposal-button proposal-button-text">
-        Subscribe
-      </button>
-      </form>
+    <div class="panel-page email-subscription">
+      <div class="panel-summary">
+        <h2 class="principle-title" style="margin-bottom: 10px;">Subscribe to our newsletter</h2>
+        <form class="newsletter-form">
+          <input type="email" placeholder="sophie@example.com" aria-label="Newsletter" />
+          <button class="proposal-button proposal-button-text">
+            Subscribe
+          </button>
+        </form>
+      </div>
     </div>
-  </div>
   </div>
 </template>
 
@@ -119,12 +122,12 @@ div.home-page {
   background-position: 50% 100%;
 
   &::after {
-      content: '';
-  position: absolute;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-color:#00000064;
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #00000064;
   }
 }
 
@@ -190,7 +193,7 @@ div.home-page {
     width: 80%;
   }
 
-  & > .panel-text {
+  &>.panel-text {
     text-align: center;
   }
 }
@@ -217,8 +220,8 @@ div.home-page {
   line-height: 27px;
   opacity: 0;
 
-    @media only screen and (min-width: 600px) {
-   text-align: center;
+  @media only screen and (min-width: 600px) {
+    text-align: center;
   }
 }
 
@@ -237,12 +240,12 @@ div.home-page {
   align-self: center;
   text-align: center;
   padding: 10px 20px;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   margin-top: 1rem;
   text-decoration: none;
   animation: appear-up-button 1s 1s forwards;
   opacity: 0;
-  color:#000000;
+  color: #000000;
 }
 
 @keyframes appear-up-button {
@@ -275,7 +278,7 @@ div.home-page {
 // Second page: profile picture
 
 .profile-photo {
- margin: 10vh 2vw;
+  margin: 10vh 2vw;
 }
 
 .outer-circle {
@@ -302,7 +305,7 @@ div.home-page {
   justify-content: center;
   margin: 0 auto;
   width: 80%;
-  font-size: 1.1rem;
+  font-size: 1.3rem;
 
   @media only screen and (min-width: 1018px) {
     font-size: 1.5rem;
@@ -360,7 +363,7 @@ div.home-page {
   display: flex;
   justify-content: flex-end;
 
-  
+
 }
 
 .proposal-panel {
@@ -415,23 +418,23 @@ div.home-page {
   position: relative;
   justify-content: flex-end;
 
-    &::after {
-      content: '';
-  position: absolute;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-color:#00000064;
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #00000064;
   }
 
-@media (min-width: 992px){
-   & > .proposal-panel {
-     align-self: flex-end;
-     justify-self: center;
-    margin-right: 2rem;
+  @media (min-width: 992px) {
+    &>.proposal-panel {
+      align-self: flex-end;
+      justify-self: center;
+      margin-right: 2rem;
+    }
   }
-}
- 
+
 }
 
 .climate {
@@ -440,23 +443,24 @@ div.home-page {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 50% 100%;
-   display: flex;
+  display: flex;
   justify-content: flex-end;
 
-  @media (min-width: 992px){
+  @media (min-width: 992px) {
     align-items: flex-start;
   }
 }
 
 .panel-summary {
   background: rgba(255, 255, 255, 0.89);
-width: 100vw;
+  width: 500px;
   display: flex;
   flex-direction: column;
 
   z-index: 0;
+  margin: auto;
 
-  @media (min-width: 992px){
+  @media (min-width: 992px) {
     width: 50vw;
     align-self: center;
   }
@@ -487,7 +491,7 @@ width: 100vw;
   background-repeat: no-repeat;
   background-position: 50% 100%;
   display: flex;
- justify-content: center;
+  justify-content: center;
 }
 
 .call-to-action-text {
@@ -520,51 +524,54 @@ width: 100vw;
 }
 
 #leader-message {
-    width: 100%;
+  width: 100%;
 }
 
 #summary-panel {
-    width: 100%;
+  width: 100%;
+
   @media only screen and (min-width: 435px) {
     width: 50%;
   }
 
-  & > .profile-description {
+  &>.profile-description {
     padding-bottom: 2rem;
   }
 }
 
 .panel {
-    background: #C4C4C4;
+  background: #C4C4C4;
   flex-direction: column;
- padding: 30px;
+  padding: 30px;
 }
 
 .newsletter-form {
-display: flex;
-flex-direction: column;
-box-sizing: border-box;
-padding: 2rem;
-  @media (min-width: 992px){
-      flex-direction: row;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  padding: 2rem;
+
+  @media (min-width: 992px) {
+    flex-direction: row;
   }
 
-  & > input[type=email] {
+  &>input[type=email] {
     width: 100%;
 
-    @media (min-width:992px){
+    @media (min-width:992px) {
       width: 100%;
     }
   }
 
-  & > .proposal-button {
+  &>.proposal-button {
     display: block;
-     justify-self: center;
-  text-align: center;
-  width: 50%;
-  margin-top: 1rem;
-  border: transparent;
-    @media (min-width:992px){
+    justify-self: center;
+    text-align: center;
+    width: 50%;
+    margin-top: 1rem;
+    border: transparent;
+
+    @media (min-width:992px) {
       justify-self: flex-end;
       width: 30%;
       margin: 0 0 0 1rem;
@@ -572,7 +579,6 @@ padding: 2rem;
   }
 
 }
-
 </style>
 
 <script lang="ts">
@@ -633,7 +639,7 @@ export default class Home extends Vue {
     colorObserver.observe(menuItem);
   }
 
-    // scrolling to sections
+  // scrolling to sections
   scrollMeTo(refName: string): void {
     var element = this.$refs[refName];
     var top = (element as HTMLElement).offsetTop;
